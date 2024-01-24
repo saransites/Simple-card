@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    height:100vh;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(30deg,rgb(221, 73, 234),rgb(48, 243, 162));
+    display:grid;
+    place-items: center;
+}
+.box{
+    width:100vw;
+    height:50vh;
+    display:flex;
+    align-items: center;
+    padding:0 20px;
+}
+.gallery{
+    width:25rem;
+    height:20rem;
+    position: relative;
+}
+.gallery img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position:absolute;
+    left:0px;
+}
+.dots{
+    width:10px;
+    height:10px;
+    position: absolute;
+    bottom:40px;
+    right:10px;
+}
+.dots .dot{
+    display:block;
+    width:100%;
+    height:100%;
+    background:black;
+    margin:5px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.dot.active{
+    background:red;
+}
+.details{
+    width:100%;
+    min-height:100%;
+    background:rgb(0, 0, 0);
+    color:#fff;
+    padding:20px;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.size{
+    display:flex;
+    align-items: center;
+}
+.size .input{
+    margin-left:15px;
+    padding:5px;
+    display:flex;
+    gap:20px;
+}
+.size input{
+    display:none;
+}
+.size input:checked + span{
+    color:rgb(255, 254, 254);
+    border:1px solid;
+    border-radius: 50%;
+    padding:1px 5px;
+    background-color: #df005d;
+}
+.size .input span{
+    width:5px;
+    height:5px;
+    cursor:pointer;
+    transition: all 0.2s;
+}
+.color{
+    display:flex;
+    align-items: center;
+}
+.color .input{
+    margin-left:15px;
+    padding:5px;
+    display:flex;
+    gap:20px;
+}
+.color input{
+    display:none;
+}
+.color input:checked + span{
+    outline:2px solid rgb(255, 255, 255);
+    outline-offset:2px;
+    border-radius: 50%;
+}
+.color .input span{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:rgb(255, 255, 255);
+    cursor:pointer;
+    border-radius: 50px;
+    transition: all 0.2s;
+
+}
+.color .input .redspan{
+    background-color: rgb(3, 184, 102);
+}
+.color .input .greenspan{
+    background-color: rgb(226, 248, 80);
+}
+.color .input .bluespan{
+    background-color: rgb(206, 23, 84);
+}
+.quantity{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+.quantity .input input{
+    width:40px;
+    padding:5px;
+    outline:none; 
+    background: none;
+    border:none;
+    background: rgba(255, 255, 255, 0.9);
+    border:1px solid white;
+    color:#000000;
+    border-radius: 50px;
+    text-align: center;
+}
+.details button{
+    padding:10px 0;
+    width:100%;
+    border-radius: 50px;
+    background-color: blue;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+}

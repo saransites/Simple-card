@@ -18,20 +18,22 @@ body{
     width:100vw;
     height:50vh;
     display:flex;
+    justify-content: center;
     align-items: center;
     padding:0 20px;
 }
 .gallery{
-    width:25rem;
-    height:20rem;
     position: relative;
+    flex-basis: 35%;
+    width:120%;
+    height:160%;
+    transition: 1s;
 }
 .gallery img{
     width:100%;
     height:100%;
     object-fit: cover;
-    position:absolute;
-    left:0px;
+    transition: 1s;
 }
 .dots{
     width:10px;
@@ -39,6 +41,7 @@ body{
     position: absolute;
     bottom:40px;
     right:10px;
+    transition: 1s;
 }
 .dots .dot{
     display:block;
@@ -48,13 +51,14 @@ body{
     margin:5px;
     border-radius: 40px;
     cursor: pointer;
+    transition: 1s;
 }
 .dot.active{
     background:red;
+    transition: 1s;
 }
 .details{
-    width:100%;
-    min-height:100%;
+    flex-basis: 35%;
     background:rgb(0, 0, 0);
     color:#fff;
     padding:20px;
@@ -151,4 +155,17 @@ body{
     border: none;
     color:#fff;
     cursor: pointer;
+}
+@media only screen and (max-width:450px){
+    .details{
+        font-size: 10px;
+        height:fit-content;
+    }
+    .gallery{
+        flex-basis: 65%;
+        height:90%;
+    }
+    .details{
+        flex-basis: 35%;
+    }
 }

@@ -16,17 +16,15 @@ body{
 }
 .box{
     width:100vw;
-    height:50vh;
+    height:auto;
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:0 20px;
+    padding:0 10px;
 }
 .gallery{
     position: relative;
     flex-basis: 35%;
-    width:120%;
-    height:160%;
     transition: 1s;
 }
 .gallery img{
@@ -62,10 +60,10 @@ body{
     background:rgb(0, 0, 0);
     color:#fff;
     padding:20px;
-    font-size: 15px;
-    display:flex;
-    flex-direction: column;
-    gap:10px;
+    font-size: 13px;
+}
+.details :is(h1,p,h3){
+    margin-bottom:5px;
 }
 .size{
     display:flex;
@@ -159,13 +157,22 @@ body{
 @media only screen and (max-width:450px){
     .details{
         font-size: 10px;
-        height:fit-content;
+        flex-basis:35%;
+    }
+    .details h1{
+        font-size: 13px;
+    }
+    .box{
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
     .gallery{
         flex-basis: 65%;
-        height:90%;
+        height:100%;
     }
-    .details{
-        flex-basis: 35%;
+    .gallery img{
+        width:100%;
+        height:100%;
     }
 }
